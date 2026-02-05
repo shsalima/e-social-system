@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>e-Social Dashboard</title>
+        <link rel="stylesheet" href="css/history.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <aside class="sidebar">
+            <div class="logo">e-Social</div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html"
+                        ><i class="ri-dashboard-line"></i>
+                        <span>Dashboard</span></a
+                    >
+                </li>
+                <li>
+                    <a href="employeurs.html"
+                        ><i class="ri-organization-chart"></i
+                        ><span>Employeurs</span></a
+                    >
+                </li>
+                <li>
+                    <a href="employees.html"
+                        ><i class="ri-team-line"></i> <span>Employees</span></a
+                    >
+                </li>
+                <li>
+                    <a href="declarations.html"
+                        ><i class="ri-file-warning-line"></i>
+                        <span>Declarations</span></a
+                    >
+                </li>
+                <li class="active">
+                    <a href="history.html"
+                        ><i class="ri-history-line"></i> <span>History</span></a
+                    >
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>History</h1>
+            </header>
+            <section class="page-content">
+                <div class="filter-section">
+                    <span>Sort by: </span>
+                    <select id="filter">
+                        <option value="year">Year</option>
+                        <option value="month">Month</option>
+                    </select>
+                </div>
+                <div class="table-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Company Name</th>
+                                <th>Penalty Month</th>
+                                <th>Delay Days</th>
+                                <th>Penalty Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Company Name</td>
+                                <td>Penalty Month</td>
+                                <td>Delay Days</td>
+                                <td>Penalty Amount</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Company Name</td>
+                                <td>Penalty Month</td>
+                                <td>Delay Days</td>
+                                <td>Penalty Amount</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

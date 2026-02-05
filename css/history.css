@@ -1,0 +1,52 @@
+.page-content {
+    padding: 0 40px;
+    .filter-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        select {
+            padding: 6px 10px;
+            border-radius: 6px;
+            width: 110px;
+            background-color: transparent;
+            border: 1px solid #cccccc;
+            outline: none;
+        }
+    }
+    .table-section {
+        table {
+            width: 700px;
+            border-collapse: collapse;
+            overflow: auto;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #d6d6d6;
+            border-radius: 10px;
+            thead,
+            tbody {
+                display: block;
+            }
+            thead {
+                background-color: #d6d6d6;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            tr {
+                display: block;
+                padding: 10px;
+            }
+            th,
+            td {
+                display: inline-block;
+                text-align: center;
+            }
+            th:first-child,
+            td:first-child {
+                width: 70px;
+            }
+            th:not(:first-child),
+            td:not(:first-child) {
+                width: 140px;
+            }
+        }
+    }
+}
