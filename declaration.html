@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>e-Social Dashboard</title>
+    <link rel="stylesheet" href="css/declaration.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="overlay hidden"></div>
+    <aside class="sidebar">
+        <div class="logo">e-Social</div>
+        <ul class="menu">
+            <li>
+                <a href="index.html"><i class="ri-dashboard-line"></i> <span>Dashboard</span></a>
+            </li>
+            <li>
+                <a href="employeurs.html"><i class="ri-organization-chart"></i><span>Employeurs</span></a>
+            </li>
+            <li>
+                <a href="employees.html"><i class="ri-team-line"></i> <span>Employees</span></a>
+            </li>
+            <li class="active">
+                <a href="declarations.html"><i class="ri-file-warning-line"></i> <span>Declarations</span></a>
+            </li>
+            <li>
+                <a href="history.html"><i class="ri-history-line"></i> <span>History</span></a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <h1>Declaration</h1>
+        </header>
+        <section>
+            <div class="btn-box">
+                <input type="submit" class="add-btn" value="+ add declaration">
+            </div>
+            <div class="form-container hidden">
+                <h2>Salary Declaration</h2>
+                <form class="form" action="#">
+
+                    <div class="row">
+                        <select class="input-box" id="employer" required>
+                            <option value="">-- Select Employer --</option>
+                            <option value="1">Company A</option>
+                            <option value="2">Company B</option>
+                        </select>
+                        <input class="input-box" type="month" id="month">
+                    </div>
+                    <div class="row">
+                        <input class="input-box" type="text" placeholder="delay days">
+                        <input class="input-box" type="text" id="displayInput" value="penalty amount" readonly>
+                    </div>
+
+                    <div class="reminder">
+                        <div class="reminder-title">
+                            Reminder
+                        </div>
+                        <p>Please note that any delay in submitting the declaration will result in a penalty of 50 DH.
+                        </p>
+                    </div>
+                    <div class="submit-btn-box">
+                        <input type="submit" class="submit-btn" value="submit declaration">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/declaration.js"></script>
+</body>
+
+</html>
