@@ -1,0 +1,37 @@
+/* Reset */
+* {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif;}
+body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
+
+/* Sidebar */
+.sidebar {
+  width:220px;
+  background:#150B59;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  padding:20px;
+  /* margin-right: 4px; */
+}
+.sidebar .logo {
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom:30px;
+}
+.sidebar .menu li {
+  list-style:none;
+  margin-bottom:20px;
+  font-size:16px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 12px;
+  /* border-radius:6px; */
+  transition: background 0.2s;
+}
+.sidebar .menu li.active,
+.sidebar .menu li:hover {
+  background:#F27127;
+}
+
+/* Main content */

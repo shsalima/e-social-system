@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>e-Social Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">e-Social</div>
+      <ul class="menu">
+        <li class="active">
+          <a href="index.html"><span></span> Dashboard</a>
+        </li>
+        <li>
+          <a href="employeurs.html"><span></span> Employeurs</a>
+        </li>
+        <li>
+          <a href="employees.html"><span></span> Employees</a>
+        </li>
+        <li>
+          <a href="declarations.html"><span></span> Declarations</a>
+        </li>
+        <li>
+          <a href="history.html"><span></span> History</a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <h1>Dashboard</h1>
+        <input type="text" placeholder="Search..." class="search" />
+      </header>
+
+      <section class="kpi-cards">
+        <div class="card">
+          <div class="card-title">
+            <span><i class="ri-money-euro-circle-fill"></i></span> Cotisations
+            totales
+          </div>
+          <div class="card-value">$320.00</div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span><i class="ri-community-line"></i></span> Employeur le plus
+            contributeur
+          </div>
+          <div class="card-value">240</div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span><i class="ri-bar-chart-2-line"></i></span> Salaire moyen
+          </div>
+          <div class="card-value">$120.00</div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span><i class="ri-file-edit-fill"></i></span>Nombre de déclarations
+          </div>
+          <div class="card-value">100</div>
+        </div>
+      </section>
+
+      <section class="chart-section">
+        <div class="chart">
+          <div class="circle-chart">
+            <span class="percent">83%</span>
+          </div>
+          <ul class="chart-legend">
+            <li><span class="dot yellow"></span> Cotisations totales 20%</li>
+            <li><span class="dot blue"></span> Top employeur 30%</li>
+            <li><span class="dot green"></span> Salaire moyen 15%</li>
+            <li><span class="dot orange"></span> Autres 18%</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
