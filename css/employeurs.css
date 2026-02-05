@@ -7,11 +7,11 @@
 }
 
 .div1 {
-  grid-area: 2 / 10 / 3 / 12;
+  grid-area: 1 / 10 / 2 / 12;
 }
 .div2 {
   grid-area: 1 / 2 / 8 / 12;
-    display: grid;
+  display: grid;
   place-items: center;
   width: 85%;
   margin: auto;
@@ -20,7 +20,8 @@
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
+  margin-top: 68px;
 }
 .div1 button {
   font-size: 19px;
@@ -34,9 +35,57 @@ th,
 td {
   padding: 8px;
 }
-table{
-    border-collapse: separate;
+table {
+  border-collapse: separate;
   border-spacing: 70px 0px;
 }
+.formDeclaration {
+  grid-area: 6 / 4 / 10 / 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  background-color: #f1f1f1;
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  /* margin-top: -52px; */
+}
 
-
+.div6 {
+  grid-area: 4 / 2 / 5 / 5;
+}
+.div7 {
+  grid-area: 4 / 6 / 5 / 9;
+}
+.div8 {
+  grid-area: 7 / 4 / 8 / 7;
+}
+.div9 {
+  grid-area: 2 / 4 / 3 / 7;
+}
+.add {
+  width: 150px;
+  padding: 6px;
+  background-color: #f4792d;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.sociale {
+  border: 1px solid #ced4da;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 10px;
+  height: 30px;
+  width: 195px;
+}
+.secteur {
+  border-radius: 10px;
+  height: 30px;
+  width: 195px;
+}
