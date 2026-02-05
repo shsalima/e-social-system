@@ -1,8 +1,8 @@
-/* Reset */
+
 * {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif;}
 body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
 
-/* Sidebar */
+
 .sidebar {
   width:220px;
   background:#150B59;
@@ -29,9 +29,25 @@ body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
   /* border-radius:6px; */
   transition: background 0.2s;
 }
+.sidebar .menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
 .sidebar .menu li.active,
 .sidebar .menu li:hover {
   background:#F27127;
 }
+.sidebar .menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.sidebar .menu .ri-dashboard-line, .ri-organization-chart, .ri-team-line ,.ri-file-warning-line , .ri-history-line {
+   font-size: 27px;
+    margin-right: 3px;
+    color: white;
+    width: 20px;
+}
 
-/* Main content */

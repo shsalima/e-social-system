@@ -17,13 +17,8 @@
      font-weight:bold;
      color: white;
     }
-.header .search {
-  padding:8px 12px;
-  border-radius:6px;
-  border:1px solid #D1D5DB;
-}
 
-/* KPI Cards */
+
 .kpi-cards {
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -56,7 +51,7 @@
     font-size:24px;
 }
 
-/* Chart section */
+
 .chart-section {
   background:white;
    padding: 25px 40px;
@@ -80,16 +75,16 @@
   border-radius: 50%;
   position: relative;
 
-  /* donut colors */
+ 
   background: conic-gradient(
-    #3B82F6 0deg 220deg,   /* bleu */
-    #10B981 220deg 280deg,/* vert */
-    #FACC15 280deg 320deg,/* jaune */
-    #F59E0B 320deg 360deg /* orange */
+    #3B82F6 0deg 220deg,  
+    #10B981 220deg 280deg,
+    #FACC15 280deg 320deg,
+    #F59E0B 320deg 360deg 
   );
 }
 
-/* hole blanc au centre */
+
 .circle-chart::before {
   content: "";
   position: absolute;
@@ -98,7 +93,7 @@
   border-radius: 50%;
 }
 
-/* pourcentage au centre (code dyalek تقريباً) */
+
 .circle-chart .percent { 
   position: absolute;
   top: 50%;
@@ -111,7 +106,7 @@
 }
 
 
-/* Legend */
+
 .chart-legend {
   list-style:none;
   display:flex;
@@ -142,7 +137,7 @@
     background:#F97316;
 }
 
-/* Responsive */
+
 @media(max-width:1024px){
   .kpi-cards {grid-template-columns:repeat(2,1fr);}
 }
