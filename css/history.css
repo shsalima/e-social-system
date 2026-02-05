@@ -47,6 +47,11 @@
             td:not(:first-child) {
                 width: 140px;
             }
+            tbody {
+                tr:not(:last-child) {
+                    border-bottom: 1px solid #d6d6d6;
+                }
+            }
         }
     }
 }
