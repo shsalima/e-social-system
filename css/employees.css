@@ -80,7 +80,7 @@ td:first-child {
 }
 th:not(:first-child),
 td:not(:first-child) {
-    width: 160px;
+    width: 140px;
 }
 tbody tr:not(:last-child) {
     border-bottom: 1px solid #d6d6d6;
@@ -164,4 +164,20 @@ select {
 }
 .error {
 border: 2px solid red;
+}
+
+.button-update {
+    background-color: #f4792d;  
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-update:hover {
+    background-color: #d9651f;
 }
