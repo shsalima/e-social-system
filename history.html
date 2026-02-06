@@ -52,7 +52,7 @@
             <section class="page-content">
                 <div class="filter-section">
                     <span>Sort by: </span>
-                    <select id="filter">
+                    <select id="table-filter">
                         <option value="year">Year</option>
                         <option value="month">Month</option>
                     </select>
@@ -68,18 +68,11 @@
                                 <th>Penalty Amount</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Company Name</td>
-                                <td>Penalty Month</td>
-                                <td>Delay Days</td>
-                                <td>Penalty Amount</td>
-                            </tr>
-                        </tbody>
+                        <tbody id="table-body"></tbody>
                     </table>
                 </div>
             </section>
         </main>
+        <script src="js/history.js"></script>
     </body>
 </html>
