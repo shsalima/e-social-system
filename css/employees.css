@@ -47,7 +47,7 @@
     align-items: flex-end;
 }
 table {
-    width: 700px;
+    width: 900px;
     border-collapse: collapse;
     overflow: auto;
     margin-top: 20px;
@@ -76,17 +76,16 @@ td {
 }
 th:first-child,
 td:first-child {
-    width: 70px;
+    width: 90px;
 }
 th:not(:first-child),
 td:not(:first-child) {
     width: 160px;
 }
-tbody {
-    tr:not(:last-child) {
-        border-bottom: 1px solid #d6d6d6;
-    }
+tbody tr:not(:last-child) {
+    border-bottom: 1px solid #d6d6d6;
 }
+
 
 /* Base style for all inputs */
 input {
@@ -162,4 +161,7 @@ select {
     width: 48%;
     border-color: #ced4da;
     border-radius: 8px;
+}
+.error {
+border: 2px solid red;
 }
