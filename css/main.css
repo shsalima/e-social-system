@@ -78,4 +78,6 @@ body {
     font-size: 34px;
     font-weight: bold;
     color: white;
+    padding-left: 12px;
+    border-left: 4px solid #f27127;
 }
