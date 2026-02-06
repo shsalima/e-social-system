@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>e-Social Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>employeurs</title>
     <link rel="stylesheet" href="css/employeurs.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
   </head>
   <body>
+    <div class="overlay hidden"></div>
     <aside class="sidebar">
       <div class="logo">e-Social</div>
       <ul class="menu">
@@ -20,13 +21,13 @@
             ><i class="ri-dashboard-line"></i> <span>Dashboard</span></a
           >
         </li>
-        <li class="active">
+        <li>
           <a href="employeurs.html"
             ><i class="ri-organization-chart"></i><span>Employeurs</span></a
           >
         </li>
-        <li>
-          <a href="employees.html"
+        <li class="active">
+          <a href="employeurs.html"
             ><i class="ri-team-line"></i> <span>Employees</span></a
           >
         </li>
@@ -42,52 +43,44 @@
         </li>
       </ul>
     </aside>
-
     <main class="main-content">
-      <header class="header">
-        <h1>Employeurs</h1>
-      </header>
-      <div class="parent">
-        <div class="div1"><button>+ add employer</button></div>
-        <div class="div2">
-          <table>
-            <thead>
-              <tr>
-                <div class="div3"><th>Employer ID</th></div>
-                <div class="div4"><th>Sociale Raison</th></div>
-                <div class="div5"><th>Secteur d’activité </th></div>
-              </tr>
-            </thead>
-          </table>
-        </div>
-        <div class="formDeclaration">
-          <div class="form">
-            <div class="div9">
-              <h3>Declaration Form</h3>
-            </div>
-            <div class="div6">
-              <input type="text" class="sociale" placeholder="Sociale Raison"/>
-            </div>
-            <div class="div7">
-              <select id="secteur" name="secteur" class="secteur">
-                <option value="">secteur d’activité </option>
-                <option value="Informatique">Informatique</option>
-                <option value="Bâtiment">Bâtiment</option>
-                <option value="Santé">Santé</option>
-                <option value="Éducation">Éducation</option>
-                <option value="Commerce">Commerce</option>
-                <option value="Finance">Finance</option>
-                <option value="Transport">Transport</option>
-                <option value="Agriculture">Agriculture</option>
-                <option value="Tourisme">Tourisme</option>
-              </select>
-            </div>
-            <div class="div8">
-                <button type="submit" class="add">add</button>
-            </div>
+      <div class="top">
+        <header class="header">
+          <h1>Employeurs</h1>
+        </header>
+        <button class="button">+ add employer</button>
+      </div>
+      <table>
+        <thead>
+          <th>Employer ID</th>
+          <th>Sociale Raison</th>
+          <th>secteur d’activité </th>
+        </thead>
+        <tbody class="tbady"></tbody>
+      </table>
+      <div class="form-card hidden">
+        <h2>Declaration Form</h2>
+
+        <form class="form">
+          <div class="form-caard">
+            <input type="text" placeholder="raison sociale" id="raison"/>
+            <select class="input-box" id="employer" required>
+              <option value="" disabled selected>Secteur d’activité</option>
+              <option value="informatique">Informatique</option>
+              <option value="batiment">Bâtiment</option>
+              <option value="sante">Santé</option>
+              <option value="education">Éducation</option>
+              <option value="commerce">Commerce</option>
+              <option value="finance">Finance</option>
+              <option value="transport">Transport</option>
+              <option value="agriculture">Agriculture</option>
+              <option value="tourisme">Tourisme</option>
+            </select>
           </div>
-        </div>
+          <button type="submit" class="button-add">+ Add</button>
+        </form>
       </div>
     </main>
+    <script src="js/employeurs.js"></script>
   </body>
 </html>
