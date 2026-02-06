@@ -34,7 +34,9 @@ function addEmployer(e) {
   };
  
   array.push(employer);
+
   localStorage.setItem("emloyeurs", JSON.stringify(array));
+  
   afichTable();
   form.reset();
   closeModal();
