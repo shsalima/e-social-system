@@ -45,16 +45,15 @@
                 <form class="form" action="#">
 
                     <div class="row">
-                        <select class="input-box" id="employer" required>
+                        <select id="selectOpt" class="input-box" id="employer" >
                             <option value="">-- Select Employer --</option>
-                            <option value="1">Company A</option>
-                            <option value="2">Company B</option>
+                           
                         </select>
-                        <input class="input-box" type="month" id="month">
+                        <input class="input-box" type="month" id="dateEl">
                     </div>
                     <div class="row">
-                        <input class="input-box" type="text" placeholder="delay days">
-                        <input class="input-box" type="text" id="displayInput" value="penalty amount" readonly>
+                        <input id="delay-days" class="input-box" type="number" placeholder="delay days">
+                        <input class="input-box" type="text" id="penalty-amount" value="penalty amount" readonly>
                     </div>
 
                     <div class="reminder">
@@ -69,6 +68,16 @@
                     </div>
                 </form>
             </div>
+        </section>
+        <section class="rules-box">
+            <h3>Late declaration rules</h3>
+            <ul>
+                <li><strong>Declaration Deadline:</strong> Salary declarations must be submitted no later than the 10th day of the declared month.</li>
+                <li><strong>Late Declaration:</strong> Any declaration submitted after the deadline is considered late.</li>
+                <li><strong>Late Days Calculation:</strong> Late days are calculated as the number of days between the deadline date and the actual declaration date.</li>
+                <li><strong>Penalty Rate:</strong> A penalty of 1% per late day is applied to the total social contribution amount.</li>
+                <li><strong>On-Time Declaration:</strong> If the declaration is submitted on or before the deadline, no penalty is applied.</li>
+            </ul>
         </section>
     </main>
     <script src="js/declaration.js"></script>

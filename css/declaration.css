@@ -5,7 +5,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -157,4 +157,24 @@ select {
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
     z-index: 5;
+}
+
+/*=============== rules style ============= */
+
+.rules-box {
+    padding: 30px;
+    background: #ebeef5fa;
+    border-left: 4px solid #F27127;
+    border-radius: 10px;
+    margin-left: 23px;
+    margin-top: 25px;
+    width: 95%;
+}
+
+.rules-box h3 {
+    margin-bottom: 15px;
+}
+
+.rules-box ul li {
+    margin-bottom: 20px;
 }
