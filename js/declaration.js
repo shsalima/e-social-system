@@ -13,21 +13,14 @@ const submitBtn = document.querySelector('.submit-btn');
 const declarationDateEl = document.querySelector('#dateEl');
 
 // ------------- getting data from local storage ----------------
-let saveData = JSON.parse(localStorage.getItem('saveData')) || [];
-
-const employers = [
-    { id: 1, companyName: "Tech Solutions Ltd", businessSector: "IT Services" },
-    { id: 2, companyName: "Green Farms Inc", businessSector: "Agriculture" },
-    { id: 3, companyName: "Urban Builders Co", businessSector: "Construction" },
-    { id: 4, companyName: "HealthPlus Clinics", businessSector: "Healthcare" },
-    { id: 5, companyName: "EduSmart Academy", businessSector: "Education" }
-];
+let declarations = JSON.parse(localStorage.getItem('declarations')) || [];
+let employeurs = JSON.parse(localStorage.getItem("emloyeurs")) || [];
 
 //------------ display data on select --------------
-employers.forEach(elm => {
+employeurs.forEach(elm => {
     const option = document.createElement('option');
     option.value = elm.id;
-    option.text = `${elm.companyName} (${elm.businessSector})`
+    option.text = `${elm.raison_socail} (${elm.secteur})`
     selectedOption.appendChild(option);
 });
 
@@ -48,7 +41,8 @@ const checkPushData = function () {
 
     if (isValid) {
         console.log("push");
-        saveData.push({
+        declarations.push({
+            id: declarations.length +1,
             companyName: EmployerText,
             delayDays: delayDays,
             declarationDate: declarationDate,
@@ -56,8 +50,7 @@ const checkPushData = function () {
         });
         closeForm();
     }
-    localStorage.setItem('saveData', JSON.stringify(saveData));
-    console.log(saveData);
+    localStorage.setItem('declarations', JSON.stringify(declarations));
     form.reset();
 }
 
@@ -85,5 +78,3 @@ const closeForm = function () {
 formEl.addEventListener('submit', checkPushData);
 addBtn.addEventListener('click', openForm);
 overlay.addEventListener('click', closeForm);
-
-
