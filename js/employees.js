@@ -9,6 +9,7 @@ let  emloyeurs = JSON.parse(localStorage.getItem("emloyeurs"))
 console.log(emloyeurs);
 
 let employees = JSON.parse(localStorage.getItem("employees")) || [];
+ RemplirTableux(); 
 console.log(employees);
 
 addBtn.addEventListener("click", () => {

@@ -44,7 +44,7 @@ function addEmployer(e) {
 }
 
 btn.addEventListener("click", addEmployer);
-
+ 
 function afichTable() {
   tbady.innerHTML = "";
 
