@@ -6,8 +6,10 @@ const table_body = document.querySelector(".table_body");
 
 
 let  emloyeurs = JSON.parse(localStorage.getItem("emloyeurs"))
+console.log(emloyeurs);
 
 let employees = JSON.parse(localStorage.getItem("employees")) || [];
+console.log(employees);
 
 addBtn.addEventListener("click", () => {
     overlay.classList.remove("hidden");
@@ -66,7 +68,7 @@ function RemplirTableux() {
 
     employees.forEach((emp) => {
         let tr = document.createElement("tr");
-        tr.innerHTML = `
+        tr.innerHTML = ` 
             <td>${emp.id}</td>
             <td>${emp.first_name}</td>
             <td>${emp.last_name}</td>

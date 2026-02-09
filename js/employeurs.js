@@ -7,8 +7,9 @@ const btn = document.querySelector(".button-add");
 const tbady = document.querySelector("tbody");
 const form = document.querySelector("form");
 
-let array = JSON.parse(localStorage.getItem("emloyeurs")) || [];
+let employer = JSON.parse(localStorage.getItem("emloyeurs")) || [];
 
+ 
 const openModal = () => {
   overlay.classList.remove("hidden");
   modal.classList.remove("hidden");
