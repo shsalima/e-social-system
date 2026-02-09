@@ -7,7 +7,7 @@ const btn = document.querySelector(".button-add");
 const tbady = document.querySelector("tbody");
 const form = document.querySelector("form");
 
-let array = JSON.parse(localStorage.getItem("emloyeurs")) || [];
+let emloyeurs = JSON.parse(localStorage.getItem("emloyeurs")) || [];
 
 const openModal = () => {
   overlay.classList.remove("hidden");
@@ -28,14 +28,14 @@ function addEmployer(e) {
   if (!raison_socail.value || !secteur.value) return;
 
   const employer = {
-    id: array.length + 1,
+    id: emloyeurs.length + 1,
     raison_socail: raison_socail.value,
     secteur: secteur.value,
   };
- 
-  array.push(employer);
 
-  localStorage.setItem("emloyeurs", JSON.stringify(array));
+  emloyeurs.push(employer);
+
+  localStorage.setItem("emloyeurs", JSON.stringify(emloyeurs));
 
   afichTable();
   form.reset();
@@ -47,7 +47,7 @@ btn.addEventListener("click", addEmployer);
 function afichTable() {
   tbady.innerHTML = "";
 
-  array.forEach((item) => {
+  emloyeurs.forEach((item) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${item.id}</td>
