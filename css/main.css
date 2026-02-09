@@ -1,7 +1,15 @@
-
-* {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif;}
-body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f9fafb;
+    color: #1f2937;
+}
 
 .main-content {
   flex:1;
@@ -40,9 +48,16 @@ body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
 
 
 .sidebar .logo {
-  font-size:24px;
-  font-weight:bold;
-  margin-bottom:30px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+.sidebar .logo img{
+  width: 35px;
 }
 .sidebar .menu li {
   display:flex;
@@ -52,22 +67,26 @@ body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
 }
 
 .sidebar .menu li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 .sidebar .menu li.active,
 .sidebar .menu li:hover {
-  background:#F27127;
+    background: #f27127;
 }
 .sidebar .menu li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
-.sidebar .menu .ri-dashboard-line, .ri-organization-chart, .ri-team-line ,.ri-file-warning-line , .ri-history-line {
-   font-size: 27px;
+.sidebar .menu .ri-dashboard-line,
+.ri-organization-chart,
+.ri-team-line,
+.ri-file-warning-line,
+.ri-history-line {
+    font-size: 27px;
     margin-right: 3px;
     color: white;
     width: 20px;
@@ -90,3 +109,21 @@ body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
 }
 
 
+.main-content {
+    flex: 1;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #150b59;
+    padding: 25px 40px;
+}
+.header h1 {
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+    padding-left: 12px;
+    border-left: 4px solid #f27127;
+}
