@@ -97,7 +97,6 @@ form input {
 
 .form input:focus {
     outline: none;
-    border-color: #f97316;
 }
 
 select {

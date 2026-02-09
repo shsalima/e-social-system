@@ -32,7 +32,7 @@ body {display:flex; min-height:100vh; background:#F9FAFB; color:#1F2937;}
 .sidebar .menu li a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  font-weight: 100;
 }
 .sidebar .menu li.active,
 .sidebar .menu li:hover {
