@@ -3,15 +3,23 @@ const overlay = document.querySelector(".overlay");
 const addBtn = document.querySelector(".button");
 const Bottun_add = document.querySelector(".button-add");
 const table_body = document.querySelector(".table_body");
+let selectEl = document.getElementById("employer");
 
-
-let  emloyeurs = JSON.parse(localStorage.getItem("emloyeurs"))
-console.log(emloyeurs);
+let employers = JSON.parse(localStorage.getItem("emloyeurs"));
+console.log(employers);
 
 let employees = JSON.parse(localStorage.getItem("employees")) || [];
 console.log(employees);
 
-RemplirTableux()
+// Set Employers in page
+
+for (let employer of employers) {
+    selectEl.innerHTML += `
+        <option value="${employer.id}">${employer.raison_socail}</option>
+    `;
+}
+
+RemplirTableux();
 
 addBtn.addEventListener("click", () => {
     overlay.classList.remove("hidden");
@@ -24,25 +32,35 @@ overlay.addEventListener("click", () => {
 });
 
 Bottun_add.addEventListener("click", function () {
-  
+    let first_name = document.getElementById("firstname").value;
+    let last_name = document.getElementById("lastname").value;
+    let salary = document.getElementById("Salary").value;
+    let employerId = selectEl.value;
 
+    if (!first_name || !last_name || !salary || !employerId) return;
 
-let first_name = document.getElementById("firstname").value;
-let last_name = document.getElementById("lastname").value;
-let salary = document.getElementById("Salary").value;
-let select_employer = document.getElementById("employer").value;
+    let currentEmployeeId = employees.length + 1;
+
+    // Link current employee to his/her employer
+    let employerOfEmployee = employers.find((emp) => emp.id == employerId);
+    let employerOfEmployeeIndex = employers.findIndex(
+        (emp) => employerOfEmployee == emp,
+    );
+    employers[employerOfEmployeeIndex].employees.push(currentEmployeeId);
 
     const obj_employees = {
-        id: employees.length + 1,
+        id: currentEmployeeId,
         first_name,
         last_name,
         salary,
-        select_employer,
+        employerId,
     };
+
+    console.log();
 
     employees.push(obj_employees);
 
-localStorage.setItem("employees", JSON.stringify(employees));
+    localStorage.setItem("employees", JSON.stringify(employees));
 
     RemplirTableux();
 
@@ -56,26 +74,28 @@ localStorage.setItem("employees", JSON.stringify(employees));
 });
 
 function updateSalary(empId, newSalary) {
-    let employee = employees.find(e => e.id === empId);
+    let employee = employees.find((e) => e.id === empId);
     if (employee) {
         employee.salary = newSalary;
         localStorage.setItem("employees", JSON.stringify(employees));
-        RemplirTableux(); 
+        RemplirTableux();
     }
 }
-
 
 function RemplirTableux() {
     table_body.innerHTML = "";
 
     employees.forEach((emp) => {
+        let employer = employers.find((e) => e.id === emp.employerId);
+        let employerName = employer ? employer.raison_socail : "";
+
         let tr = document.createElement("tr");
         tr.innerHTML = ` 
             <td>${emp.id}</td>
             <td>${emp.first_name}</td>
             <td>${emp.last_name}</td>
             <td>${emp.salary}</td>
-            <td>${emp.select_employer}</td>
+            <td>${employerName}</td>
             <td>
                 <button class="button-update" onclick="updateSalary(${emp.id}, prompt('Nouveau salaire pour ${emp.first_name} ${emp.last_name}'))">
                      <i class="ri-edit-fill"></i>
