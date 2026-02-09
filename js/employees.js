@@ -6,10 +6,8 @@ const table_body = document.querySelector(".table_body");
 let selectEl = document.getElementById("employer");
 
 let employers = JSON.parse(localStorage.getItem("emloyeurs"));
-console.log(employers);
 
 let employees = JSON.parse(localStorage.getItem("employees")) || [];
-console.log(employees);
 
 // Set Employers in page
 
@@ -47,16 +45,15 @@ Bottun_add.addEventListener("click", function () {
         (emp) => employerOfEmployee == emp,
     );
     employers[employerOfEmployeeIndex].employees.push(currentEmployeeId);
+    localStorage.setItem("emloyeurs", JSON.stringify(employers))
 
     const obj_employees = {
         id: currentEmployeeId,
         first_name,
         last_name,
         salary,
-        employerId,
+        employerName: employerOfEmployee.raison_socail,
     };
-
-    console.log();
 
     employees.push(obj_employees);
 
@@ -86,16 +83,13 @@ function RemplirTableux() {
     table_body.innerHTML = "";
 
     employees.forEach((emp) => {
-        let employer = employers.find((e) => e.id === emp.employerId);
-        let employerName = employer ? employer.raison_socail : "";
-
         let tr = document.createElement("tr");
         tr.innerHTML = ` 
             <td>${emp.id}</td>
             <td>${emp.first_name}</td>
             <td>${emp.last_name}</td>
             <td>${emp.salary}</td>
-            <td>${employerName}</td>
+            <td>${emp.employerName}</td>
             <td>
                 <button class="button-update" onclick="updateSalary(${emp.id}, prompt('Nouveau salaire pour ${emp.first_name} ${emp.last_name}'))">
                      <i class="ri-edit-fill"></i>
