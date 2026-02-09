@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>employeurs</title>
+    <link rel="stylesheet" href="css/employeurs.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="overlay hidden"></div>
+    <aside class="sidebar">
+      <div class="logo">e-Social</div>
+      <ul class="menu">
+        <li>
+          <a href="index.html"
+            ><i class="ri-dashboard-line"></i> <span>Dashboard</span></a
+          >
+        </li>
+        <li class="active">
+          <a href="employeurs.html"
+            ><i class="ri-organization-chart"></i><span>Employeurs</span></a
+          >
+        </li>
+        <li >
+          <a href="employees.html"
+            ><i class="ri-team-line"></i> <span>Employees</span></a
+          >
+        </li>
+        <li>
+          <a href="declarations.html"
+            ><i class="ri-file-warning-line"></i> <span>Declarations</span></a
+          >
+        </li>
+        <li>
+          <a href="history.html"
+            ><i class="ri-history-line"></i> <span>History</span></a
+          >
+        </li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <div class="top">
+        <header class="header">
+          <h1>Employeurs</h1>
+        </header>
+        <button class="button">+ add employer</button>
+      </div>
+      <table>
+        <thead>
+          <th>Employer ID</th>
+          <th>Sociale Raison</th>
+          <th>secteur d’activité </th>
+        </thead>
+        <tbody class="tbady"></tbody>
+      </table>
+      <div class="form-card hidden">
+        <h2>Declaration Form</h2>
+
+        <form class="form">
+          <div class="form-caard">
+            <input type="text" placeholder="raison sociale" id="raison"/>
+            <select class="input-box" id="employer" required>
+              <option value="" disabled selected>Secteur d’activité</option>
+              <option value="informatique">Informatique</option>
+              <option value="batiment">Bâtiment</option>
+              <option value="sante">Santé</option>
+              <option value="education">Éducation</option>
+              <option value="commerce">Commerce</option>
+              <option value="finance">Finance</option>
+              <option value="transport">Transport</option>
+              <option value="agriculture">Agriculture</option>
+              <option value="tourisme">Tourisme</option>
+            </select>
+          </div>
+          <button type="submit" class="button-add">+ Add</button>
+        </form>
+      </div>
+    </main>
+    <script src="js/employeurs.js"></script>
+  </body>
+</html>
