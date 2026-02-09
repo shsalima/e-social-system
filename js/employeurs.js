@@ -1,8 +1,8 @@
 const modal = document.querySelector(".form-card");
 const overlay = document.querySelector(".overlay");
 const addBtn = document.querySelector(".button");
-const raisonEL = document.querySelector("#raison");
-const employerEL = document.querySelector("#employer");
+const raison_socail = document.querySelector("#raison");
+const secteur = document.querySelector("#employer");
 const btn = document.querySelector(".button-add");
 const tbady = document.querySelector("tbody");
 const form = document.querySelector("form");
@@ -26,16 +26,18 @@ addBtn.addEventListener("click", openModal);
 function addEmployer(e) {
   e.preventDefault();
 
-  if (!raisonEL.value || !employerEL.value) return;
+  if (!raison_socail.value || !secteur.value) return;
 
   const employer = {
     id: array.length + 1,
-    raison: raisonEL.value,
-    employer: employerEL.value,
+    raison_socail: raison_socail.value,
+    secteur: secteur.value,
   };
  
   array.push(employer);
+
   localStorage.setItem("emloyeurs", JSON.stringify(array));
+
   afichTable();
   form.reset();
   closeModal();
@@ -50,8 +52,8 @@ function afichTable() {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${item.id}</td>
-      <td>${item.raison}</td>
-      <td>${item.employer}</td>
+      <td>${item.raison_socail}</td>
+      <td>${item.secteur}</td>
     `;
     tbady.appendChild(tr);
   });
