@@ -11,7 +11,7 @@ console.log(emloyeurs);
 let employees = JSON.parse(localStorage.getItem("employees")) || [];
 console.log(employees);
 
- RemplirTableux()
+RemplirTableux()
 
 addBtn.addEventListener("click", () => {
     overlay.classList.remove("hidden");
