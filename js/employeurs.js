@@ -28,14 +28,15 @@ function addEmployer(e) {
     if (!raison_socail.value || !secteur.value) return;
 
     const employer = {
-        id: emloyeurs.length + 1,
+        id: employeurs.length + 1,
         raison_socail: raison_socail.value,
         secteur: secteur.value,
+        employees: [],
     };
 
-    emloyeurs.push(employer);
+    employeurs.push(employer);
 
-    localStorage.setItem("emloyeurs", JSON.stringify(emloyeurs));
+    localStorage.setItem("emloyeurs", JSON.stringify(employeurs));
 
     afichTable();
     form.reset();
@@ -47,7 +48,7 @@ btn.addEventListener("click", addEmployer);
 function afichTable() {
     tbady.innerHTML = "";
 
-    emloyeurs.forEach((item) => {
+    employeurs.forEach((item) => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
       <td>${item.id}</td>
