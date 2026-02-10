@@ -20,6 +20,13 @@ let declarations = [
         penaltyAmount: 350.5,
     },
     {
+        id: 104,
+        companyName: "Initech",
+        penaltyMonthAndYear: "2023-12",
+        delayDays: 20,
+        penaltyAmount: 1000.0,
+    },
+    {
         id: 103,
         companyName: "Soylent Corp",
         penaltyMonthAndYear: "2023-11",
@@ -27,22 +34,24 @@ let declarations = [
         penaltyAmount: 50.0,
     },
     {
-        id: 104,
-        companyName: "Initech",
-        penaltyMonthAndYear: "2023-12",
-        delayDays: 20,
-        penaltyAmount: 1000.0,
+        id: 103,
+        companyName: "test",
+        penaltyMonthAndYear: "2025-9",
+        delayDays: 2,
+        penaltyAmount: 50.0,
     },
 ];
 
+let filterMode = "date-added";
+
 // 3. <-- Main Function -->
 
-const updateTable = () => {
+const updateTable = (arr) => {
     // Empty the table
     tableBody.innerHTML = "";
 
     // Put data in the table
-    for (let declaration of declarations) {
+    for (let declaration of arr) {
         tableBody.innerHTML += `
             <tr>
                 <td>${declaration.id}</td>
@@ -61,6 +70,55 @@ const updateTable = () => {
     }
 };
 
+const filterData = () => {
+    switch (filterMode) {
+        case "date-added":
+            updateTable(declarations);
+            break;
+        case "year":
+            updateTable(sortedData(filterMode));
+            break;
+        case "month":
+            updateTable(sortedData(filterMode));
+    }
+};
+
+const sortedData = (type) => {
+    let arrToFilter = [...declarations];
+
+    switch (type) {
+        case "year":
+            return arrToFilter.sort((a, b) =>
+                a.penaltyMonthAndYear
+                    .slice(0, -2)
+                    .localeCompare(
+                        b.penaltyMonthAndYear.slice(0, -2),
+                        undefined,
+                        {
+                            numeric: true,
+                        }
+                    )
+            );
+
+        case "month":
+            return arrToFilter.sort((a, b) =>
+                a.penaltyMonthAndYear
+                    .slice(-2)
+                    .localeCompare(b.penaltyMonthAndYear.slice(-2), undefined, {
+                        numeric: true,
+                    })
+            );
+    }
+};
+
 // 4. <-- Set Data in the Page -->
 
-updateTable();
+updateTable(declarations);
+
+// 5. <-- Filter Data -->
+
+tableFilter.addEventListener("change", () => {
+    filterMode = tableFilter.value;
+
+    filterData();
+});
