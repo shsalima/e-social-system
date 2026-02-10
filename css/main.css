@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    /* margin-right: 4px; */
 }
 .sidebar .logo {
     font-size: 24px;

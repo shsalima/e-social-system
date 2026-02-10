@@ -3,7 +3,6 @@ const overlay = document.querySelector('.overlay');
 const formModal = document.querySelector('.form-container');
 const form = document.querySelector('.form');
 
-
 //------------------- select html inputs --------------------
 const selectedOption = document.querySelector('#selectOpt')
 const formEl = document.querySelector('.form');
@@ -35,8 +34,8 @@ const checkPushData = function () {
     allInputs.forEach(input => {
         if (input.value.trim() === '') {
             isValid = false;
-            input.style.borderColor = '#FA5C5C'
-        } else input.style.borderColor = '#ddd'
+            input.style.borderColor = '#FA5C5C';
+        } else input.style.borderColor = '#ddd';
     });
 
     if (isValid) {
@@ -63,8 +62,8 @@ const openForm = function () {
         const delayDays = delayDaysEl.value;
         if (delayDays) {
             if (delayDays > 0) {
-                var penaltyAmountResult = delayDays * 50
-                penaltyAmountEl.value = `${penaltyAmountResult} DH`
+                var penaltyAmountResult = delayDays * 50;
+                penaltyAmountEl.value = `${penaltyAmountResult} DH`;
             }
         }
     })

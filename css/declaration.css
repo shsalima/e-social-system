@@ -183,10 +183,10 @@ select {
         background-color: #e8641f;
     }
 
-    .title-form {
+    .form-container h2 {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        padding-bottom: 20px;
     }
 
     .form {
@@ -198,5 +198,25 @@ select {
     .input-box {
         width: 100%;
         box-sizing: border-box;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 345px;
+        padding: 24px;
+    }
+
+    #selectOpt {
+        padding: 14px 16px;
+        border-radius: 8px;
+        border: 1px solid #d0d5dd;
+        font-size: 14px;
+    }
+
+    .reminder {
+        margin-bottom: 0;
     }
 }
