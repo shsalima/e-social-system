@@ -11,41 +11,41 @@ body {
     color: #1f2937;
 }
 
-.main-content {
-  flex:1;
-  /* padding:0px 40px; */
+.sidebar {
+    width: 220px;
+    background: #150b59;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 .header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:30px;
-  background-color: #150B59;
-  padding: 25px 40px;
-  
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #150b59;
+    padding: 25px 40px;
 }
 .header h1 {
-    font-size:34px;
-     font-weight:bold;
-     color: white;
-     
-    }
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+}
 
 .sidebar {
-  width:220px;
-  background:#150B59;
-  color:white;
-  display:flex;
-  flex-direction:column;
-  padding:20px;
+    width: 220px;
+    background: #150b59;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 .sidebar .menu {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-
 
 .sidebar .logo {
     font-size: 24px;
@@ -56,20 +56,20 @@ body {
     align-items: center;
     gap: 9px;
 }
-.sidebar .logo img{
-  width: 35px;
+.sidebar .logo img {
+    width: 35px;
 }
 .sidebar .menu li {
-  display:flex;
-  align-items:center;
-  gap:15px;
-  padding:10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .sidebar .menu li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    padding: 10px 12px;
 }
 .sidebar .menu li.active,
 .sidebar .menu li:hover {
@@ -91,23 +91,22 @@ body {
     color: white;
     width: 20px;
 }
-@media (max-width:640px){
-  body {
-    flex-direction: column;
-  }
+@media (max-width: 640px) {
+    body {
+        flex-direction: column;
+    }
 
-  .sidebar {
-    width:100%;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-  .sidebar .menu {
-    flex-direction: row;
-    gap: 10px;
-  }
+    .sidebar .menu {
+        flex-direction: row;
+        gap: 10px;
+    }
 }
-
 
 .main-content {
     flex: 1;

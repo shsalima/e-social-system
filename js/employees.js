@@ -42,10 +42,10 @@ Bottun_add.addEventListener("click", function () {
     // Link current employee to his/her employer
     let employerOfEmployee = employers.find((emp) => emp.id == employerId);
     let employerOfEmployeeIndex = employers.findIndex(
-        (emp) => employerOfEmployee == emp,
+        (emp) => employerOfEmployee == emp
     );
     employers[employerOfEmployeeIndex].employees.push(currentEmployeeId);
-    localStorage.setItem("emloyeurs", JSON.stringify(employers))
+    localStorage.setItem("emloyeurs", JSON.stringify(employers));
 
     const obj_employees = {
         id: currentEmployeeId,

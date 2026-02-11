@@ -4,43 +4,7 @@ let tableFilter = document.getElementById("table-filter"),
 
 // 2. <-- Main Variables -->
 
-let declarations = [
-    {
-        id: 101,
-        companyName: "Acme Corp",
-        penaltyMonthAndYear: "2023-10",
-        delayDays: 5,
-        penaltyAmount: 150.0,
-    },
-    {
-        id: 102,
-        companyName: "Globex Corporation",
-        penaltyMonthAndYear: "2023-11",
-        delayDays: 12,
-        penaltyAmount: 350.5,
-    },
-    {
-        id: 104,
-        companyName: "Initech",
-        penaltyMonthAndYear: "2023-12",
-        delayDays: 20,
-        penaltyAmount: 1000.0,
-    },
-    {
-        id: 103,
-        companyName: "Soylent Corp",
-        penaltyMonthAndYear: "2023-11",
-        delayDays: 2,
-        penaltyAmount: 50.0,
-    },
-    {
-        id: 103,
-        companyName: "test",
-        penaltyMonthAndYear: "2025-9",
-        delayDays: 2,
-        penaltyAmount: 50.0,
-    },
-];
+let declarations = JSON.parse(localStorage.getItem("declarations")) || [];
 
 let filterMode = "date-added";
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>e-Social Dashboard</title>
+        <link rel="stylesheet" href="css/declaration.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <div class="overlay hidden"></div>
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/image.png" /><span> e-Social</span>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html"
+                        ><i class="ri-dashboard-line"></i>
+                        <span>Dashboard</span></a
+                    >
+                </li>
+                <li>
+                    <a href="employeurs.html"
+                        ><i class="ri-organization-chart"></i
+                        ><span>Employeurs</span></a
+                    >
+                </li>
+                <li>
+                    <a href="employees.html"
+                        ><i class="ri-team-line"></i> <span>Employees</span></a
+                    >
+                </li>
+                <li class="active">
+                    <a href="declarations.html"
+                        ><i class="ri-file-warning-line"></i>
+                        <span>Declarations</span></a
+                    >
+                </li>
+                <li>
+                    <a href="history.html"
+                        ><i class="ri-history-line"></i> <span>History</span></a
+                    >
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Declaration</h1>
+            </header>
+            <section>
+                <div class="btn-box">
+                    <input
+                        type="submit"
+                        class="add-btn"
+                        value="+ add declaration"
+                    />
+                </div>
+                <div class="form-container hidden">
+                    <h2 class="title-form">Salary Declaration</h2>
+                    <form class="form" action="#">
+                        <div class="row">
+                            <select
+                                id="selectOpt"
+                                class="input-box"
+                                id="employer"
+                            >
+                                <option value="">-- Select Employer --</option>
+                            </select>
+                            <input class="input-box" type="month" id="dateEl" />
+                        </div>
+                        <div class="row">
+                            <input
+                                id="delay-days"
+                                class="input-box"
+                                type="number"
+                                placeholder="delay days"
+                            />
+                            <input
+                                class="input-box"
+                                type="text"
+                                id="penalty-amount"
+                                value="penalty amount"
+                                readonly
+                            />
+                        </div>
+
+                        <div class="reminder">
+                            <div class="reminder-title">Reminder</div>
+                            <p>
+                                Please note that any delay in submitting the
+                                declaration will result in a penalty of 50 DH.
+                            </p>
+                        </div>
+                        <div class="submit-btn-box">
+                            <input
+                                type="submit"
+                                class="submit-btn"
+                                value="submit declaration"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="rules-box">
+                <h3>Late declaration rules</h3>
+                <ul>
+                    <li>
+                        <strong>Declaration Deadline:</strong> Salary
+                        declarations must be submitted no later than the 10th
+                        day of the declared month.
+                    </li>
+                    <li>
+                        <strong>Late Declaration:</strong> Any declaration
+                        submitted after the deadline is considered late.
+                    </li>
+                    <li>
+                        <strong>Late Days Calculation:</strong> Late days are
+                        calculated as the number of days between the deadline
+                        date and the actual declaration date.
+                    </li>
+                    <li>
+                        <strong>Penalty Rate:</strong> A penalty of 1% per late
+                        day is applied to the total social contribution amount.
+                    </li>
+                    <li>
+                        <strong>On-Time Declaration:</strong> If the declaration
+                        is submitted on or before the deadline, no penalty is
+                        applied.
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <script src="js/declaration.js"></script>
+    </body>
+</html>

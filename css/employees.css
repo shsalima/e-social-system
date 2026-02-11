@@ -86,7 +86,6 @@ tbody tr:not(:last-child) {
     border-bottom: 1px solid #d6d6d6;
 }
 
-
 /* Base style for all inputs */
 input {
     flex: 1; /* Allows inputs to grow and fill available space */
@@ -127,7 +126,7 @@ input {
     gap: 20px; /* Space between rows */
     width: 700px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -163,11 +162,11 @@ select {
     border-radius: 8px;
 }
 .error {
-border: 2px solid red;
+    border: 2px solid red;
 }
 
 .button-update {
-    background-color: #f4792d;  
+    background-color: #f4792d;
     color: white;
     border: none;
     padding: 6px 12px;

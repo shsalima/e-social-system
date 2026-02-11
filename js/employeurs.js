@@ -8,7 +8,6 @@ const tbady = document.querySelector("tbody");
 const form = document.querySelector("form");
 
 let employeurs = JSON.parse(localStorage.getItem("emloyeurs")) || [];
-
 const openModal = () => {
     overlay.classList.remove("hidden");
     modal.classList.remove("hidden");
