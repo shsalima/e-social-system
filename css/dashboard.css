@@ -1,60 +1,56 @@
-
-
-
 .kpi-cards {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 20px;
   padding: 25px 40px;
 }
 
 .card {
- 
   width: 300px;
-  background:#150B59;
-  padding:20px;
-  border-radius:10px;
-  text-align:center;
-  box-shadow:0 4px 15px rgba(0,0,0,0.1);
-  color:white;
+  background: #150b59;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .card-title {
-    font-size: 20px;
-    color:white;
-    margin-bottom: 10px;
-    font-weight: bold;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .ri-money-euro-circle-fill,
 .ri-community-line,
 .ri-bar-chart-2-line {
-    font-size: 27px;
-    margin-right: 3px;
-    color: #F27127;
-    width: 20px;
+  font-size: 27px;
+  margin-right: 3px;
+  color: #f27127;
+  width: 20px;
 }
 .card-value {
-    color:#F27127;
-    font-size:24px;
+  color: #f27127;
+  font-size: 24px;
 }
 
 .chart-section {
-    background: white;
-    padding: 25px 40px;
-    margin: 20px 60px;
+  background: white;
+  padding: 25px 40px;
+  margin: 20px 0px;
+  width: 60%;
+  margin-left: 240px;
 
-    border-radius: 10px;
-    box-shadow: 0 0px 10px #150b59;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px #150b59;
 }
-.chart{
-    display: flex;
+.chart {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
-
-  
 }
 .chart-legend {
   display: flex;
@@ -63,87 +59,61 @@
 }
 
 .circle-chart {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    /* border:10px solid #3B82F6; */
-    position: relative;
-    margin: 0 auto 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 20px;
 }
 .circle-chart {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    position: relative;
-
-    background: conic-gradient(
-        #3b82f6 0deg 220deg,
-        #10b981 220deg 280deg,
-        #facc15 280deg 320deg
-    );
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: relative;
 }
 
 .circle-chart::before {
-    content: "";
-    position: absolute;
-    inset: 18px;
-    background: #ffffff;
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  inset: 18px;
+  background: #ffffff;
+  border-radius: 50%;
 }
 
 .circle-chart .percent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 26px;
-    font-weight: 600;
-    color: #1f2937;
-    z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  font-weight: 600;
+  color: #1f2937;
+  z-index: 1;
 }
 
 .chart-legend {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 .chart-legend li {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
 }
 .chart-legend .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
 }
 .dot.yellow {
-    background: #facc15;
+  background: #facc15;
 }
 .dot.blue {
-    background: #3b82f6;
+  background: #3b82f6;
 }
 .dot.green {
-    background: #10b981;
+  background: #10b981;
 }
-
-
-
-@media (max-width:1024px){
-  .card {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
-
-@media (max-width:640px){
-  .kpi-cards {
-    flex-direction: column;
-  }
-
-  .card {
-    flex: 1 1 100%;
-  }
-}
-
