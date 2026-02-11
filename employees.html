@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/employees.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="overlay hidden"></div>
+        <aside class="sidebar">
+            <div class="logo">e-Social</div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html"
+                        ><i class="ri-dashboard-line"></i>
+                        <span>Dashboard</span></a
+                    >
+                </li>
+                <li>
+                    <a href="employeurs.html"
+                        ><i class="ri-organization-chart"></i
+                        ><span>Employeurs</span></a
+                    >
+                </li>
+                <li class="active">
+                    <a href="employees.html"
+                        ><i class="ri-team-line"></i> <span>Employees</span></a
+                    >
+                </li>
+                <li>
+                    <a href="declarations.html"
+                        ><i class="ri-file-warning-line"></i>
+                        <span>Declarations</span></a
+                    >
+                </li>
+                <li>
+                    <a href="history.html"
+                        ><i class="ri-history-line"></i> <span>History</span></a
+                    >
+                </li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="top">
+                <header class="header">
+                    <h1>Employees</h1>
+                </header>
+                <button class="button">+ add employee</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>first name</th>
+                        <th>last name</th>
+                        <th>Salary</th>
+                        <th>Employer</th>
+                        <th>Modifier salaire</th>
+                    </tr>
+                </thead>
+                <tbody class="table_body"></tbody>
+            </table>
+            <div class="form-card hidden">
+                <h2>Add Employee</h2>
+
+                <div class="input-row">
+                    <input id="firstname" type="text" placeholder="first name" required />
+                    <input id="lastname" type="text" placeholder="last name" required/>
+                </div>
+                <div class="input-row">
+                    <input
+                        id="Salary"
+                        type="number"
+                        placeholder="Salary"
+                        class="full-width"
+                        required
+                    />
+                    <select class="input-box" id="employer" required>
+                        <option value="">Select Employer</option>
+                    </select>
+                </div>
+
+                <button type="button" class="button-add">+ Add</button>
+            </div>
+        </main>
+        <script src="js/employees.js"></script>
+    </body>
+</html>
