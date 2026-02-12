@@ -71,6 +71,8 @@ Bottun_add.addEventListener("click", function () {
 });
 
 function updateSalary(empId, newSalary) {
+    if (newSalary == null) return;
+
     let employee = employees.find((e) => e.id === empId);
     if (employee) {
         employee.salary = newSalary;
