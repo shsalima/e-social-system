@@ -52,7 +52,7 @@ body {
         gap: 10px;
         display: none;
         position: fixed;
-        top: 68px;
+        top: 85px;
         right: 9px;
         background-color: #f27127;
     }
@@ -62,7 +62,7 @@ body {
     .sidebar .menu::before {
         content: "";
         position: absolute;
-        top: -27px;
+        top: -26px;
         right: 10px;
         border-width: 14px;
         border-style: solid;
