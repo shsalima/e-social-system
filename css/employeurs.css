@@ -61,7 +61,7 @@
 table {
     width: 700px;
     border-collapse: collapse;
-    margin: 30px auto;
+    margin: 30px auto 0;
     box-shadow: 0 0 10px #d6d6d6;
     border-radius: 10px;
     overflow: hidden;

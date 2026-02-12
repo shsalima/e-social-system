@@ -169,6 +169,12 @@ select {
     width: 95%;
 }
 
+@media (max-width: 767px) {
+    .rules-box {
+        margin: 25px auto;
+    }
+}
+
 .rules-box h3 {
     margin-bottom: 15px;
 }

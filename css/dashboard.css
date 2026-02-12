@@ -5,6 +5,12 @@
     padding: 25px 40px;
 }
 
+@media (max-width: 767px) {
+    .kpi-cards {
+        justify-content: center;
+    }
+}
+
 .card {
     width: 300px;
     background: #150b59;
@@ -13,6 +19,12 @@
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: white;
+}
+
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+    }
 }
 
 .card-title {
@@ -38,10 +50,8 @@
 .chart-section {
     background: white;
     padding: 25px 40px;
-    margin: 20px 0px;
+    margin: 20px auto;
     width: 60%;
-    margin-left: 240px;
-
     border-radius: 10px;
     box-shadow: 0 0px 10px #150b59;
 }

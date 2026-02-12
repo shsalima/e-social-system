@@ -2,15 +2,20 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <title>e-Social Dashboard</title>
+        <title>E-Social System Declarations</title>
         <link rel="stylesheet" href="css/declaration.css" />
         <link rel="stylesheet" href="css/main.css" />
         <link
             href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
             rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
     </head>
-
     <body>
         <div class="overlay hidden"></div>
         <aside class="sidebar">
@@ -47,95 +52,108 @@
                     >
                 </li>
             </ul>
+            <button id="menu-icon">
+                <i class="ri-menu-line"></i>
+            </button>
         </aside>
-
         <main class="main-content">
             <header class="header">
                 <h1>Declaration</h1>
             </header>
-            <section>
-                <div class="btn-box">
-                    <input
-                        type="submit"
-                        class="add-btn"
-                        value="+ add declaration"
-                    />
-                </div>
-                <div class="form-container hidden">
-                    <h2 class="title-form">Salary Declaration</h2>
-                    <form class="form" action="#">
-                        <div class="row">
-                            <select
-                                id="selectOpt"
-                                class="input-box"
-                                id="employer"
-                            >
-                                <option value="">-- Select Employer --</option>
-                            </select>
-                            <input class="input-box" type="month" id="dateEl" />
-                        </div>
-                        <div class="row">
-                            <input
-                                id="delay-days"
-                                class="input-box"
-                                type="number"
-                                placeholder="delay days"
-                            />
-                            <input
-                                class="input-box"
-                                type="text"
-                                id="penalty-amount"
-                                value="penalty amount"
-                                readonly
-                            />
-                        </div>
+            <div class="page-content">
+                <section>
+                    <div class="btn-box">
+                        <input
+                            type="submit"
+                            class="add-btn"
+                            value="+ add declaration"
+                        />
+                    </div>
+                    <div class="form-container hidden">
+                        <h2 class="title-form">Salary Declaration</h2>
+                        <form class="form" action="#">
+                            <div class="row">
+                                <select
+                                    id="selectOpt"
+                                    class="input-box"
+                                    id="employer"
+                                >
+                                    <option value="">
+                                        -- Select Employer --
+                                    </option>
+                                </select>
+                                <input
+                                    class="input-box"
+                                    type="month"
+                                    id="dateEl"
+                                />
+                            </div>
+                            <div class="row">
+                                <input
+                                    id="delay-days"
+                                    class="input-box"
+                                    type="number"
+                                    placeholder="delay days"
+                                />
+                                <input
+                                    class="input-box"
+                                    type="text"
+                                    id="penalty-amount"
+                                    value="penalty amount"
+                                    readonly
+                                />
+                            </div>
 
-                        <div class="reminder">
-                            <div class="reminder-title">Reminder</div>
-                            <p>
-                                Please note that any delay in submitting the
-                                declaration will result in a penalty of 50 DH.
-                            </p>
-                        </div>
-                        <div class="submit-btn-box">
-                            <input
-                                type="submit"
-                                class="submit-btn"
-                                value="submit declaration"
-                            />
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <section class="rules-box">
-                <h3>Late declaration rules</h3>
-                <ul>
-                    <li>
-                        <strong>Declaration Deadline:</strong> Salary
-                        declarations must be submitted no later than the 10th
-                        day of the declared month.
-                    </li>
-                    <li>
-                        <strong>Late Declaration:</strong> Any declaration
-                        submitted after the deadline is considered late.
-                    </li>
-                    <li>
-                        <strong>Late Days Calculation:</strong> Late days are
-                        calculated as the number of days between the deadline
-                        date and the actual declaration date.
-                    </li>
-                    <li>
-                        <strong>Penalty Rate:</strong> A penalty of 1% per late
-                        day is applied to the total social contribution amount.
-                    </li>
-                    <li>
-                        <strong>On-Time Declaration:</strong> If the declaration
-                        is submitted on or before the deadline, no penalty is
-                        applied.
-                    </li>
-                </ul>
-            </section>
+                            <div class="reminder">
+                                <div class="reminder-title">Reminder</div>
+                                <p>
+                                    Please note that any delay in submitting the
+                                    declaration will result in a penalty of 50
+                                    DH.
+                                </p>
+                            </div>
+                            <div class="submit-btn-box">
+                                <input
+                                    type="submit"
+                                    class="submit-btn"
+                                    value="submit declaration"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <section class="rules-box">
+                    <h3>Late declaration rules</h3>
+                    <ul>
+                        <li>
+                            <strong>Declaration Deadline:</strong> Salary
+                            declarations must be submitted no later than the
+                            10th day of the declared month.
+                        </li>
+                        <li>
+                            <strong>Late Declaration:</strong> Any declaration
+                            submitted after the deadline is considered late.
+                        </li>
+                        <li>
+                            <strong>Late Days Calculation:</strong> Late days
+                            are calculated as the number of days between the
+                            deadline date and the actual declaration date.
+                        </li>
+                        <li>
+                            <strong>Penalty Rate:</strong> A penalty of 1% per
+                            late day is applied to the total social contribution
+                            amount.
+                        </li>
+                        <li>
+                            <strong>On-Time Declaration:</strong> If the
+                            declaration is submitted on or before the deadline,
+                            no penalty is applied.
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </main>
+        <script src="js/main.js"></script>
         <script src="js/declaration.js"></script>
     </body>
 </html>
